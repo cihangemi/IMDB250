@@ -16,7 +16,8 @@ for movie in movietable:
     movietitle = movie.find_all("td",{"class":"titleColumn"})
     rating=movie.find_all("td",{"class":"ratingColumn imdbRating"})
     moviename=movietitle[0].text
-    ratings=rating[0].text.replace("\n","-")
+    ratings=rating[0].text.replace("\n","")
     moviename=moviename.replace("\n","")
-    print(moviename,ratings)
+    print(moviename,"-"+ratings)
+    print("--------------------------------------------------------------")
 
